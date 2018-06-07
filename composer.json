@@ -6,7 +6,7 @@
     "license": "MIT",
     "require": {
         "php": ">=5.6.0",
-        "vamshop/vamshop-core": "^3.0.x"
+        "vamshop/vamshop-core": "^3.0.1"
     },
     "autoload": {
         "psr-4": {
