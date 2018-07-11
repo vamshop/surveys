@@ -1,7 +1,7 @@
 <?php
 
 use Cake\Routing\RouteBuilder;
-use Croogo\Core\Router;
+use Vamshop\Core\Router;
 
 Router::plugin('Surveys', ['path' => '/'], function (RouteBuilder $route) {
     $route->prefix('admin', function(RouteBuilder $route) {

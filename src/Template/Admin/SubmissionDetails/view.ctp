@@ -1,6 +1,6 @@
 <?php
 
-$this->extend('Croogo/Core./Common/admin_view');
+$this->extend('Vamshop/Core./Common/admin_view');
 
 $this->Breadcrumbs
     ->add(__d('croogo', 'Submission Details'), ['action' => 'index']);
@@ -8,14 +8,14 @@ $this->Breadcrumbs
     $this->Breadcrumbs->add($submissionDetail->id, $this->request->here());
 
 $this->append('action-buttons');
-    echo $this->Croogo->adminAction(__('Edit Submission Detail'), ['action' => 'edit', $submissionDetail->id]);
-    echo $this->Croogo->adminAction(__('Delete Submission Detail'), ['action' => 'delete', $submissionDetail->id], ['confirm' => __('Are you sure you want to delete # {0}?', $submissionDetail->id)]);
-    echo $this->Croogo->adminAction(__('List Submission Details'), ['action' => 'index']);
-    echo $this->Croogo->adminAction(__('New Submission Detail'), ['action' => 'add']);
-        echo $this->Croogo->adminAction(__('List Questions'), ['controller' => 'Questions', 'action' => 'index']);
-        echo $this->Croogo->adminAction(__('New Question'), ['controller' => 'Questions', 'action' => 'add']);
-        echo $this->Croogo->adminAction(__('List Submissions'), ['controller' => 'Submissions', 'action' => 'index']);
-        echo $this->Croogo->adminAction(__('New Submission'), ['controller' => 'Submissions', 'action' => 'add']);
+    echo $this->Vamshop->adminAction(__('Edit Submission Detail'), ['action' => 'edit', $submissionDetail->id]);
+    echo $this->Vamshop->adminAction(__('Delete Submission Detail'), ['action' => 'delete', $submissionDetail->id], ['confirm' => __('Are you sure you want to delete # {0}?', $submissionDetail->id)]);
+    echo $this->Vamshop->adminAction(__('List Submission Details'), ['action' => 'index']);
+    echo $this->Vamshop->adminAction(__('New Submission Detail'), ['action' => 'add']);
+        echo $this->Vamshop->adminAction(__('List Questions'), ['controller' => 'Questions', 'action' => 'index']);
+        echo $this->Vamshop->adminAction(__('New Question'), ['controller' => 'Questions', 'action' => 'add']);
+        echo $this->Vamshop->adminAction(__('List Submissions'), ['controller' => 'Submissions', 'action' => 'index']);
+        echo $this->Vamshop->adminAction(__('New Submission'), ['controller' => 'Submissions', 'action' => 'add']);
 $this->end();
 
 $this->append('main');

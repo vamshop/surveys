@@ -2,9 +2,9 @@
 
 namespace Surveys\Controller;
 
-use Croogo\Core\Controller\AppController as CroogoController;
+use Vamshop\Core\Controller\AppController as VamshopController;
 
-class SurveysController extends CroogoController
+class SurveysController extends VamshopController
 {
 
     public function view($id = null)

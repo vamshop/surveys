@@ -5,7 +5,7 @@
 ?>
 <?php
 
-$this->extend('Croogo/Core./Common/admin_edit');
+$this->extend('Vamshop/Core./Common/admin_edit');
 
 $this->Breadcrumbs->add(__('Question Options'), ['action' => 'index']);
 $action = $this->request->param('action');
@@ -17,20 +17,20 @@ else:
 endif;
 
 $this->append('action-buttons');
-    echo $this->Croogo->adminAction(__('Delete'),
+    echo $this->Vamshop->adminAction(__('Delete'),
         ['action' => 'delete', $questionOption->id],
         ['confirm' => __('Are you sure you want to delete # {0}?', $questionOption->id)]
     );
-    echo $this->Croogo->adminAction(__('List Question Options'),
+    echo $this->Vamshop->adminAction(__('List Question Options'),
         ['action' => 'index']
     );
-    echo $this->Croogo->adminAction(__('List Questions'), ['controller' => 'Questions', 'action' => 'index']);
-    echo $this->Croogo->adminAction(__('New Question'), ['controller' => 'Questions', 'action' => 'add']);
+    echo $this->Vamshop->adminAction(__('List Questions'), ['controller' => 'Questions', 'action' => 'index']);
+    echo $this->Vamshop->adminAction(__('New Question'), ['controller' => 'Questions', 'action' => 'add']);
 $this->end();
 $this->append('form-start', $this->Form->create($questionOption));
 
 $this->append('tab-heading');
-    echo $this->Croogo->adminTab('Question Option', '#question-option');
+    echo $this->Vamshop->adminTab('Question Option', '#question-option');
 $this->end();
 
 $this->append('tab-content');
@@ -41,5 +41,5 @@ $this->append('tab-content');
             'default' => 1,
         ]);
     echo $this->Html->tabEnd();
-    echo $this->Croogo->adminTabs();
+    echo $this->Vamshop->adminTabs();
 $this->end();

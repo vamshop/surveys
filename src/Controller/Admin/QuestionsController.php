@@ -3,14 +3,14 @@
 namespace Surveys\Controller\Admin;
 
 use Cake\Event\Event;
-use Croogo\Core\Controller\Admin\AppController as CroogoController;
+use Vamshop\Core\Controller\Admin\AppController as VamshopController;
 
 /**
  * Questions Controller
  *
  * @property \Surveys\Model\Table\QuestionsTable $Questions
  */
-class QuestionsController extends CroogoController
+class QuestionsController extends VamshopController
 {
 
     /**
@@ -20,10 +20,10 @@ class QuestionsController extends CroogoController
     {
         parent::initialize();
         $this->Crud->config('actions.moveUp', [
-            'className' => 'Croogo/Core.Admin/MoveUp',
+            'className' => 'Vamshop/Core.Admin/MoveUp',
         ]);
         $this->Crud->config('actions.moveDown', [
-            'className' => 'Croogo/Core.Admin/MoveDown',
+            'className' => 'Vamshop/Core.Admin/MoveDown',
         ]);
     }
 

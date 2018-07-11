@@ -1,6 +1,6 @@
 <?php
 
-use Croogo\Core\Nav;
+use Vamshop\Core\Nav;
 
 Nav::add('sidebar', 'survey', [
     'icon' => 'list-ol',

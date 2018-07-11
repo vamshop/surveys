@@ -1,6 +1,6 @@
 <?php
 
-$this->extend('Croogo/Core./Common/admin_index');
+$this->extend('Vamshop/Core./Common/admin_index');
 
 $addUrl = [
     'controller' => 'QuestionOptions',
@@ -28,7 +28,7 @@ endif;
 $this->Breadcrumbs->add(__('Question Options'), $this->request->here());
 
 $this->append('action-buttons');
-    echo $this->Croogo->adminAction(__('New Question Option'), $addUrl);
+    echo $this->Vamshop->adminAction(__('New Question Option'), $addUrl);
 $this->end();
 
 $this->append('table-heading');
@@ -65,9 +65,9 @@ $this->append('table-body');
         <td><?= h($questionOption->created) ?></td>
         <td><?= h($questionOption->modified) ?></td>
 <?php
-        $actions[] = $this->Croogo->adminRowActions($questionOption->id);
+        $actions[] = $this->Vamshop->adminRowActions($questionOption->id);
 
-        $actions[] = $this->Croogo->adminRowAction('', [
+        $actions[] = $this->Vamshop->adminRowAction('', [
             'action' => 'moveUp',
             $questionOption->id,
         ], [
@@ -75,16 +75,16 @@ $this->append('table-body');
             'method' => 'post',
         ]);
 
-        $actions[] = $this->Croogo->adminRowAction('', [
+        $actions[] = $this->Vamshop->adminRowAction('', [
             'action' => 'moveDown',
             $questionOption->id,
         ], [
             'icon' => $this->Theme->getIcon('move-down'),
             'method' => 'post',
         ]);
-        $actions[] = $this->Croogo->adminRowAction('', ['action' => 'view', $questionOption->id], ['icon' => 'read']);
-        $actions[] = $this->Croogo->adminRowAction('', ['action' => 'edit', $questionOption->id], ['icon' => 'update']);
-        $actions[] = $this->Croogo->adminRowAction('', ['action' => 'delete', $questionOption->id], ['icon' => 'delete']);
+        $actions[] = $this->Vamshop->adminRowAction('', ['action' => 'view', $questionOption->id], ['icon' => 'read']);
+        $actions[] = $this->Vamshop->adminRowAction('', ['action' => 'edit', $questionOption->id], ['icon' => 'update']);
+        $actions[] = $this->Vamshop->adminRowAction('', ['action' => 'delete', $questionOption->id], ['icon' => 'delete']);
 ?>
         <td class="actions">
             <div class="item-actions">

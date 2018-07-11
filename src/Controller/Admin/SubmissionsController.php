@@ -3,14 +3,14 @@
 namespace Surveys\Controller\Admin;
 
 use Cake\Event\Event;
-use Croogo\Core\Controller\Admin\AppController as CroogoController;
+use Vamshop\Core\Controller\Admin\AppController as VamshopController;
 
 /**
  * Submissions Controller
  *
  * @property \Surveys\Model\Table\SubmissionsTable $Submissions
  */
-class SubmissionsController extends CroogoController
+class SubmissionsController extends VamshopController
 {
 
     public function initialize()

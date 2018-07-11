@@ -5,7 +5,7 @@
 ?>
 <?php
 
-$this->extend('Croogo/Core./Common/admin_edit');
+$this->extend('Vamshop/Core./Common/admin_edit');
 
 $this->Breadcrumbs->add(__('Surveys'), ['action' => 'index']);
 $action = $this->request->param('action');
@@ -17,19 +17,19 @@ else:
 endif;
 
 $this->append('action-buttons');
-    echo $this->Croogo->adminAction(__('List Surveys'),
+    echo $this->Vamshop->adminAction(__('List Surveys'),
         ['action' => 'index']
     );
 $this->end();
 $this->append('form-start', $this->Form->create($survey));
 
 $this->append('tab-heading');
-    echo $this->Croogo->adminTab('Survey', '#survey');
+    echo $this->Vamshop->adminTab('Survey', '#survey');
 $this->end();
 
 $this->append('tab-content');
     echo $this->Html->tabStart('survey');
         echo $this->Form->input('title');
     echo $this->Html->tabEnd();
-    echo $this->Croogo->adminTabs();
+    echo $this->Vamshop->adminTabs();
 $this->end();

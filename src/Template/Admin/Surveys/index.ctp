@@ -1,10 +1,10 @@
 <?php
 
-$this->extend('Croogo/Core./Common/admin_index');
+$this->extend('Vamshop/Core./Common/admin_index');
 $this->Breadcrumbs->add(__('Surveys'), ['action' => 'index']);
 
 $this->append('action-buttons');
-    echo $this->Croogo->adminAction(__('New Survey'), ['action' => 'add']);
+    echo $this->Vamshop->adminAction(__('New Survey'), ['action' => 'add']);
 $this->end();
 
 $this->append('table-heading');
@@ -33,10 +33,10 @@ $this->append('table-body');
         <td><?= h($survey->created) ?></td>
         <td><?= h($survey->modified) ?></td>
 <?php
-        $actions[] = $this->Croogo->adminRowActions($survey->id);
-        $actions[] = $this->Croogo->adminRowAction('', ['action' => 'view', $survey->id], ['icon' => 'read']);
-        $actions[] = $this->Croogo->adminRowAction('', ['action' => 'edit', $survey->id], ['icon' => 'update']);
-        $actions[] = $this->Croogo->adminRowAction('', ['action' => 'delete', $survey->id], ['icon' => 'delete']);
+        $actions[] = $this->Vamshop->adminRowActions($survey->id);
+        $actions[] = $this->Vamshop->adminRowAction('', ['action' => 'view', $survey->id], ['icon' => 'read']);
+        $actions[] = $this->Vamshop->adminRowAction('', ['action' => 'edit', $survey->id], ['icon' => 'update']);
+        $actions[] = $this->Vamshop->adminRowAction('', ['action' => 'delete', $survey->id], ['icon' => 'delete']);
 ?>
         <td class="actions">
             <div class="item-actions">

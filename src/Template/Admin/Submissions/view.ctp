@@ -1,7 +1,7 @@
 <?php
 
-$this->extend('Croogo/Core./Common/admin_view');
-$this->Croogo->adminScript('Surveys.admin');
+$this->extend('Vamshop/Core./Common/admin_view');
+$this->Vamshop->adminScript('Surveys.admin');
 
 $this->Breadcrumbs
     ->add(__d('croogo', 'Submissions'), ['action' => 'index']);
@@ -9,10 +9,10 @@ $this->Breadcrumbs
     $this->Breadcrumbs->add($submission->id, $this->request->here());
 
 $this->append('action-buttons');
-    echo $this->Croogo->adminAction(__('List Submissions'), ['action' => 'index']);
+    echo $this->Vamshop->adminAction(__('List Submissions'), ['action' => 'index']);
 $this->end();
 
-$this->append('page-footer', $this->element('Croogo/Core.admin/modal', array(
+$this->append('page-footer', $this->element('Vamshop/Core.admin/modal', array(
     'id' => 'survey-modal',
     'class' => 'hide',
 )));

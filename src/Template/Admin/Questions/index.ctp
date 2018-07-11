@@ -1,6 +1,6 @@
 <?php
 
-$this->extend('Croogo/Core./Common/admin_index');
+$this->extend('Vamshop/Core./Common/admin_index');
 
 $this->Breadcrumbs->add(__('Surveys'), ['controller' => 'Surveys', 'action' => 'index']);
 
@@ -17,8 +17,8 @@ if (isset($survey)) {
 $this->Breadcrumbs->add(__('Questions'), $this->request->here());
 
 $this->append('action-buttons');
-    echo $this->Croogo->adminAction(__('New Question'), $addUrl);
-    echo $this->Croogo->adminAction(__('List Surveys'), ['controller' => 'Surveys', 'action' => 'index']);
+    echo $this->Vamshop->adminAction(__('New Question'), $addUrl);
+    echo $this->Vamshop->adminAction(__('List Surveys'), ['controller' => 'Surveys', 'action' => 'index']);
 $this->end();
 
 $this->append('table-heading');
@@ -56,9 +56,9 @@ $this->append('table-body');
         <td><?= $question->required ? 'Yes' : 'No' ?></td>
         <td><?= h($question->modified) ?></td>
 <?php
-        $actions[] = $this->Croogo->adminRowActions($question->id);
+        $actions[] = $this->Vamshop->adminRowActions($question->id);
 
-        $actions[] = $this->Croogo->adminRowAction('', [
+        $actions[] = $this->Vamshop->adminRowAction('', [
             'action' => 'moveUp',
             $question->id,
         ], [
@@ -66,7 +66,7 @@ $this->append('table-body');
             'method' => 'post',
         ]);
 
-        $actions[] = $this->Croogo->adminRowAction('', [
+        $actions[] = $this->Vamshop->adminRowAction('', [
             'action' => 'moveDown',
             $question->id,
         ], [
@@ -74,9 +74,9 @@ $this->append('table-body');
             'method' => 'post',
         ]);
 
-        $actions[] = $this->Croogo->adminRowAction('', ['action' => 'view', $question->id], ['icon' => 'read']);
-        $actions[] = $this->Croogo->adminRowAction('', ['action' => 'edit', $question->id], ['icon' => 'update']);
-        $actions[] = $this->Croogo->adminRowAction('', ['action' => 'delete', $question->id], ['icon' => 'delete']);
+        $actions[] = $this->Vamshop->adminRowAction('', ['action' => 'view', $question->id], ['icon' => 'read']);
+        $actions[] = $this->Vamshop->adminRowAction('', ['action' => 'edit', $question->id], ['icon' => 'update']);
+        $actions[] = $this->Vamshop->adminRowAction('', ['action' => 'delete', $question->id], ['icon' => 'delete']);
 ?>
         <td class="actions">
             <div class="item-actions">

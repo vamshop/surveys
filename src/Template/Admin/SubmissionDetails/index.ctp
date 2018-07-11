@@ -1,14 +1,14 @@
 <?php
 
-$this->extend('Croogo/Core./Common/admin_index');
+$this->extend('Vamshop/Core./Common/admin_index');
 $this->Breadcrumbs->add(__('Submission Details'), ['action' => 'index']);
 
 $this->append('action-buttons');
-    echo $this->Croogo->adminAction(__('New Submission Detail'), ['action' => 'add']);
-        echo $this->Croogo->adminAction(__('List Questions'), ['controller' => 'Questions', 'action' => 'index']);
-        echo $this->Croogo->adminAction(__('New Question'), ['controller' => 'Questions', 'action' => 'add']);
-        echo $this->Croogo->adminAction(__('List Submissions'), ['controller' => 'Submissions', 'action' => 'index']);
-        echo $this->Croogo->adminAction(__('New Submission'), ['controller' => 'Submissions', 'action' => 'add']);
+    echo $this->Vamshop->adminAction(__('New Submission Detail'), ['action' => 'add']);
+        echo $this->Vamshop->adminAction(__('List Questions'), ['controller' => 'Questions', 'action' => 'index']);
+        echo $this->Vamshop->adminAction(__('New Question'), ['controller' => 'Questions', 'action' => 'add']);
+        echo $this->Vamshop->adminAction(__('List Submissions'), ['controller' => 'Submissions', 'action' => 'index']);
+        echo $this->Vamshop->adminAction(__('New Submission'), ['controller' => 'Submissions', 'action' => 'add']);
 $this->end();
 
 $this->append('table-heading');
@@ -45,10 +45,10 @@ $this->append('table-body');
         <td><?= h($submissionDetail->created) ?></td>
         <td><?= h($submissionDetail->modified) ?></td>
 <?php
-        $actions[] = $this->Croogo->adminRowActions($submissionDetail->id);
-        $actions[] = $this->Croogo->adminRowAction('', ['action' => 'view', $submissionDetail->id], ['icon' => 'read']);
-        $actions[] = $this->Croogo->adminRowAction('', ['action' => 'edit', $submissionDetail->id], ['icon' => 'update']);
-        $actions[] = $this->Croogo->adminRowAction('', ['action' => 'delete', $submissionDetail->id], ['icon' => 'delete']);
+        $actions[] = $this->Vamshop->adminRowActions($submissionDetail->id);
+        $actions[] = $this->Vamshop->adminRowAction('', ['action' => 'view', $submissionDetail->id], ['icon' => 'read']);
+        $actions[] = $this->Vamshop->adminRowAction('', ['action' => 'edit', $submissionDetail->id], ['icon' => 'update']);
+        $actions[] = $this->Vamshop->adminRowAction('', ['action' => 'delete', $submissionDetail->id], ['icon' => 'delete']);
 ?>
         <td class="actions">
             <div class="item-actions">

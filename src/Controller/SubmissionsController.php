@@ -2,10 +2,10 @@
 
 namespace Surveys\Controller;
 
-use App\Controller\AppController as CroogoController;
+use App\Controller\AppController as VamshopController;
 use Cake\Event\Event;
 
-class SubmissionsController extends CroogoController
+class SubmissionsController extends VamshopController
 {
 
     use \Cake\Log\LogTrait;

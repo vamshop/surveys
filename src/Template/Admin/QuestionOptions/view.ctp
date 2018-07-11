@@ -1,6 +1,6 @@
 <?php
 
-$this->extend('Croogo/Core./Common/admin_view');
+$this->extend('Vamshop/Core./Common/admin_view');
 
 if ($questionOption->has('question') && $questionOption->question->has('survey')):
     $this->Breadcrumbs->add('Surveys', [
@@ -33,10 +33,10 @@ $this->Breadcrumbs
     $this->Breadcrumbs->add($questionOption->id, $this->request->here());
 
 $this->append('action-buttons');
-    echo $this->Croogo->adminAction(__('Edit'), ['action' => 'edit', $questionOption->id]);
-    echo $this->Croogo->adminAction(__('Delete'), ['action' => 'delete', $questionOption->id], ['confirm' => __('Are you sure you want to delete # {0}?', $questionOption->id)]);
-    echo $this->Croogo->adminAction(__('List'), ['action' => 'index']);
-    echo $this->Croogo->adminAction(__('New'), ['action' => 'add']);
+    echo $this->Vamshop->adminAction(__('Edit'), ['action' => 'edit', $questionOption->id]);
+    echo $this->Vamshop->adminAction(__('Delete'), ['action' => 'delete', $questionOption->id], ['confirm' => __('Are you sure you want to delete # {0}?', $questionOption->id)]);
+    echo $this->Vamshop->adminAction(__('List'), ['action' => 'index']);
+    echo $this->Vamshop->adminAction(__('New'), ['action' => 'add']);
 $this->end();
 
 $this->append('main');

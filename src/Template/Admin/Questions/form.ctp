@@ -5,7 +5,7 @@
 ?>
 <?php
 
-$this->extend('Croogo/Core./Common/admin_edit');
+$this->extend('Vamshop/Core./Common/admin_edit');
 
 $addUrl = [
     'controller' => 'QuestionOptions',
@@ -32,11 +32,11 @@ $action = $this->request->param('action');
 if ($action == 'edit'):
     $this->Breadcrumbs->add($question->id);
     $this->append('action-buttons');
-        echo $this->Croogo->adminAction(__('Delete'),
+        echo $this->Vamshop->adminAction(__('Delete'),
             ['action' => 'delete', $question->id],
             ['confirm' => __('Are you sure you want to delete # {0}?', $question->id)]
         );
-        echo $this->Croogo->adminAction(__('New Question Option'), $addUrl);
+        echo $this->Vamshop->adminAction(__('New Question Option'), $addUrl);
     $this->end();
 else:
     $this->Breadcrumbs->add(__d('croogo', 'Add'), $this->request->here());
@@ -45,7 +45,7 @@ endif;
 $this->append('form-start', $this->Form->create($question));
 
 $this->append('tab-heading');
-    echo $this->Croogo->adminTab('Question', '#question');
+    echo $this->Vamshop->adminTab('Question', '#question');
 $this->end();
 
 $this->append('tab-content');
@@ -63,5 +63,5 @@ $this->append('tab-content');
         echo $this->Form->input('questions');
         echo $this->Form->input('required');
     echo $this->Html->tabEnd();
-    echo $this->Croogo->adminTabs();
+    echo $this->Vamshop->adminTabs();
 $this->end();

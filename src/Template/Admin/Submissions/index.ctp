@@ -1,6 +1,6 @@
 <?php
 
-$this->extend('Croogo/Core./Common/admin_index');
+$this->extend('Vamshop/Core./Common/admin_index');
 
 if (isset($survey)):
     $this->Breadcrumbs->add(__('Surveys'), ['controller' => 'Surveys', 'action' => 'index']);
@@ -11,7 +11,7 @@ $this->Breadcrumbs->add(__('Submissions'), ['action' => 'index']);
 
 if ($this->request->query('survey_id')):
     $this->append('action-buttons');
-        echo $this->Croogo->adminAction('Export', array_merge(
+        echo $this->Vamshop->adminAction('Export', array_merge(
             $this->request->query, ['export' => true]
         ));
     $this->end();
@@ -59,10 +59,10 @@ $this->append('table-body');
         <td><?= h($submission->created) ?></td>
         <td><?= h($submission->modified) ?></td>
 <?php
-        $actions[] = $this->Croogo->adminRowActions($submission->id);
-        $actions[] = $this->Croogo->adminRowAction('', ['action' => 'view', $submission->id], ['icon' => 'read']);
-        $actions[] = $this->Croogo->adminRowAction('', ['action' => 'edit', $submission->id], ['icon' => 'update']);
-        $actions[] = $this->Croogo->adminRowAction('', ['action' => 'delete', $submission->id], ['icon' => 'delete']);
+        $actions[] = $this->Vamshop->adminRowActions($submission->id);
+        $actions[] = $this->Vamshop->adminRowAction('', ['action' => 'view', $submission->id], ['icon' => 'read']);
+        $actions[] = $this->Vamshop->adminRowAction('', ['action' => 'edit', $submission->id], ['icon' => 'update']);
+        $actions[] = $this->Vamshop->adminRowAction('', ['action' => 'delete', $submission->id], ['icon' => 'delete']);
 ?>
         <td class="actions">
             <div class="item-actions">

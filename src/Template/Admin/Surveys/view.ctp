@@ -1,6 +1,6 @@
 <?php
 
-$this->extend('Croogo/Core./Common/admin_view');
+$this->extend('Vamshop/Core./Common/admin_view');
 
 $this->Breadcrumbs
     ->add(__d('croogo', 'Surveys'), ['action' => 'index']);
@@ -8,8 +8,8 @@ $this->Breadcrumbs
     $this->Breadcrumbs->add($survey->title, $this->request->here());
 
 $this->append('action-buttons');
-    echo $this->Croogo->adminAction(__('Edit Survey'), ['action' => 'edit', $survey->id]);
-    echo $this->Croogo->adminAction(__('New Question'), [
+    echo $this->Vamshop->adminAction(__('Edit Survey'), ['action' => 'edit', $survey->id]);
+    echo $this->Vamshop->adminAction(__('New Question'), [
         'controller' => 'Questions',
         'action' => 'add',
         'survey_id' => $survey->id,

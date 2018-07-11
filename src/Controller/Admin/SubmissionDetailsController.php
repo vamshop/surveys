@@ -2,14 +2,14 @@
 
 namespace Surveys\Controller\Admin;
 
-use Croogo\Core\Controller\Admin\AppController as CroogoController;
+use Vamshop\Core\Controller\Admin\AppController as VamshopController;
 
 /**
  * SubmissionDetails Controller
  *
  * @property \Surveys\Model\Table\SubmissionDetailsTable $SubmissionDetails
  */
-class SubmissionDetailsController extends CroogoController
+class SubmissionDetailsController extends VamshopController
 {
 
     /**
