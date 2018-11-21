@@ -39,7 +39,7 @@ if ($action == 'edit'):
         echo $this->Vamshop->adminAction(__('New Question Option'), $addUrl);
     $this->end();
 else:
-    $this->Breadcrumbs->add(__d('croogo', 'Add'), $this->request->here());
+    $this->Breadcrumbs->add(__d('vamshop', 'Add'), $this->request->here());
 endif;
 
 $this->append('form-start', $this->Form->create($question));

@@ -3,7 +3,7 @@
 $this->extend('Vamshop/Core./Common/admin_view');
 
 $this->Breadcrumbs
-    ->add(__d('croogo', 'Submission Details'), ['action' => 'index']);
+    ->add(__d('vamshop', 'Submission Details'), ['action' => 'index']);
 
     $this->Breadcrumbs->add($submissionDetail->id, $this->request->here());
 

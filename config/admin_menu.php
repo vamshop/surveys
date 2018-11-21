@@ -4,7 +4,7 @@ use Vamshop\Core\Nav;
 
 Nav::add('sidebar', 'survey', [
     'icon' => 'list-ol',
-    'title' => __d('croogo', 'Survey'),
+    'title' => __d('vamshop', 'Survey'),
     'url' => [
         'prefix' => 'admin',
         'plugin' => 'Surveys',

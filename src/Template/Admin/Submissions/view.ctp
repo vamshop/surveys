@@ -4,7 +4,7 @@ $this->extend('Vamshop/Core./Common/admin_view');
 $this->Vamshop->adminScript('Surveys.admin');
 
 $this->Breadcrumbs
-    ->add(__d('croogo', 'Submissions'), ['action' => 'index']);
+    ->add(__d('vamshop', 'Submissions'), ['action' => 'index']);
 
     $this->Breadcrumbs->add($submission->id, $this->request->here());
 

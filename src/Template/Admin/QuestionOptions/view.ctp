@@ -28,7 +28,7 @@ if ($questionOption->has('question') && $questionOption->question->has('survey')
 endif;
 
 $this->Breadcrumbs
-    ->add(__d('croogo', 'Question Options'), ['action' => 'index']);
+    ->add(__d('vamshop', 'Question Options'), ['action' => 'index']);
 
     $this->Breadcrumbs->add($questionOption->id, $this->request->here());
 
